@@ -11,6 +11,9 @@ Requirements:
     OpenSSL packages are outdated and with broken
 	dependencies, so no luck)
 
+NOTE: Important for VS 2010. Download latest file msinttypes-r26.zip from https://code.google.com/archive/p/msinttypes/downloads.
+Unzip it in C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\.
+The files stdint.h and inttypes.h are missing in VS 2010 and librdkafka needs them.
 
 The Visual Studio solution file for librdkafka resides in win32/librdkafka.sln
 
