@@ -4,9 +4,11 @@ Native win32 build instructions using Microsoft Visual Studio (MSVC).
 Requirements:
  * zlib is installed automatically from NuGet,
    but probably requires the NuGet VS extension.
- * OpenSSL-win32 must be installed in C:\OpenSSL-win32.
+ * OpenSSL-win32 must be installed in C:\OpenSSL-win32 or C:\OpenSSL-win64.
    Download and install the latest non-light package from:
    https://slproweb.com/products/Win32OpenSSL.html
+   You may take https://slproweb.com/download/Win32OpenSSL-1_0_2h.exe or
+   https://slproweb.com/download/Win64OpenSSL-1_0_2h.exe for 32 and 64 bit installers.
    (This would be using NuGet too but the current
     OpenSSL packages are outdated and with broken
 	dependencies, so no luck)
@@ -15,7 +17,8 @@ NOTE: Important for VS 2010. Download latest file msinttypes-r26.zip from https:
 Unzip it in C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\.
 The files stdint.h and inttypes.h are missing in VS 2010 and librdkafka needs them.
 
-The Visual Studio solution file for librdkafka resides in win32/librdkafka.sln
+The Visual Studio solution file for librdkafka resides in win32/librdkafka.sln and for VS 2010, the corresponding
+file is win32/librdkafka_2010.sln.
 
 Artifacts:
  - C library
